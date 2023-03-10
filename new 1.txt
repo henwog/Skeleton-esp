@@ -1,16 +1,8 @@
---// Skeleton ESP \\--
+ --// Skeleton ESP \\--
   
   local SkeletonColor = Color3.fromRGB(225, 225, 225) -- put your color changer stuff here
   local Skeletons = nil
-  
-  PlayerESPTab:AddToggle('MyToggle', {
-  Text = 'Skeleton',
-  Default = false, -- Default value (true / false)
-  Tooltip = 'On / Off', -- Information shown when you hover over the toggle
-  }):AddColorPicker('SkeletonColor', {
-  Default = Color3.new(0, 1, 0),
-  Title = 'Color',
-  })
+
   Options.SkeletonColor:OnChanged(function(Color)
   SkeletonColor = Color
   end)
@@ -218,4 +210,3 @@
   coroutine.wrap(DrawDrop)(drop)
   end
   end)
-  
